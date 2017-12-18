@@ -59,7 +59,9 @@
   <ItemGroup>
     <Content Include="Image\SAAS.png" />
     <Content Include="Js\CommonTools.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Tools.cs" />
