@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>COS测试</title> 
+    <script type="text/javascript">
+
+        window.onunload = function (e) {
+             alert('debugger')
+             debugger
+             if(window.returnValue == null || window.returnValue == undefined ){
+                alert('just close');                
+                window.returnValue = 'close'; 
+                return true;
+             }
+
+                alert('no change');
+                return true;
+          }
+
+        function Choose() {
+            //return true;
+            window.returnValue=true;
+            window.close();
+        }
+        function heng() {
+            //return false;
+            window.returnValue=false;
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="btnChoose" onclick="Choose();" value="ok!" />
+    <input type="button" id="close" onclick="heng();" value="close" />
+</body>
+</html>
