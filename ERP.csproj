@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ctrl\Proxy.asmx" />
     <Content Include="Image\SAAS.png" />
     <Content Include="Js\CommonTools.js" />
     <Content Include="Web.config">
@@ -65,12 +66,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Tools.cs" />
+    <Compile Include="Ctrl\Proxy.ashx.cs">
+      <DependentUpon>Proxy.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl\Proxy.asmx.cs">
+      <DependentUpon>Proxy.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ctrl\ProxyTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\Version.ini" />
     <Content Include="README.md" />
     <Content Include="Docs\Mn.ini" />
+    <Content Include="Ctrl\Proxy.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
